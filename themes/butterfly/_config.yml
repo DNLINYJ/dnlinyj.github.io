@@ -291,7 +291,7 @@ aside:
       link: https://github.com/DNLINYJ
   card_announcement:
     enable: true
-    content: 一个菜鸡の博客\nAction Precedes Motivation.
+    content: Action Precedes Motivation.
   card_recent_post:
     enable: true
     # If set 0 will show all
