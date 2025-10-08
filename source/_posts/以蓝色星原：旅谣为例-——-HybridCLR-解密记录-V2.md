@@ -5,8 +5,6 @@ tags:
 ---
 
 
-# 以蓝色星原：旅谣为例 —— HybridCLR 解密记录 V2
-
 在 BW 试玩过蓝色星原 ~~(蓝色原神)~~ 之后，一直想找包解，浑身刺挠（
 
 包体流出后，发现 AB 包只是单纯的 UnityCN 特色解密（无聊
@@ -17,7 +15,7 @@ tags:
 
 > 补: 这篇文章所涉及的加解密与代码哲学新推出与 `HybridCLR` 共同使用的 `Obfuz` 混淆器相关
 
-## 1. 分析 `global-metadata.dat` 解密
+## 分析 `global-metadata.dat` 解密
 
 在 IDA 中搜索 `CODEPHIL` 或者 `global-metadata.dat`，前者对应 `DecryptMetaData`，后者对应 `il2cpp::vm::GlobalMetadata::Initialize`
 
@@ -52,7 +50,7 @@ struct decryptedGlobalMetadata {
 
 对于 `DecryptBlock` 的分析，见后文内容 =w=
 
-## 2. 分析 HybridCLR 对 HotPatch DLL 的加载
+## 分析 HybridCLR 对 HotPatch DLL 的加载
 
 在[官方文档](https://www.hybridclr.cn/docs/beginner/quickstart#%E5%8A%A0%E8%BD%BD%E7%83%AD%E6%9B%B4%E6%96%B0%E7%A8%8B%E5%BA%8F%E9%9B%86)中，直接使用了 `Assembly.Load` 来加载 HotPatch 的 DLL
 
@@ -76,13 +74,13 @@ LoadImageErrorCode RawImageBase::Load(const void* rawImageData, size_t length)
 
 所以对自定义 HotPatch DLL 的加载和解密会在 `RawImageBase::Load` 里面
 
-## 3. HotPatch DLL 的加载和解密分析
+## HotPatch DLL 的加载和解密分析
 
 在 IDA 中定位到 `RawImageBase::Load` (AzurPromilia CBT1 GameAssembly.dll RVA 0x95F380)
 
 ![alt text](image-3.png)
 
-### 3.1 LoadCDPHHeader
+### LoadCDPHHeader
 
 原版 HybridCLR 中, `LoadCDPHHeader` 的位置实际是 `LoadCLIHeader`，所以 `LoadCDPHHeader` 在读取自定义结构的时候，也会读取 `CLI Header`
 
@@ -207,7 +205,7 @@ LoadCDPHHeader 具体流程如下 (伪代码已经经过 LLM 处理)
     }
 ```
 
-### 3.2 LoadStreamHeaders / LoadTables
+### LoadStreamHeaders / LoadTables
 
 参照 HybirdCLR 原版代码，这部分读取没有做自定义化处理
 
@@ -216,7 +214,7 @@ LoadCDPHHeader 具体流程如下 (伪代码已经经过 LLM 处理)
 [LoadImageErrorCode RawImageBase::LoadTables()](https://github.com/focus-creative-games/hybridclr/blob/main/hybridclr/metadata/RawImageBase.cpp#L200)
 
 
-### 3.3 PostLoadStreams (解密 #1)
+### PostLoadStreams (解密 #1)
 
 `PostLoadStreams` 在 HybirdCLR 原版代码没有给出定义，在这里它负责将 .NET 元数据的 streams 进行解密操作
 
@@ -235,14 +233,14 @@ LoadCDPHHeader 具体流程如下 (伪代码已经经过 LLM 处理)
 |3|#US|User String（C# 源里写的 `@"..."`/普通字符串常量）|
 |5|#~ / #-|**表流（Tables Stream）** #~ 为优化格式，#- 多用于编辑/调试|
 
-### 3.4 PostLoadTables
+### PostLoadTables
 
 这段 `PostLoadTables` 很“vector 内存管理味儿”，作用就是：
 **把一个按“表2行数（rowNum）”计的辅助数组（字节数组）扩到足够大，并把新扩出来的部分清零，最后把 size 设为 rowNum。**
 
 换句话说：在读取完元数据表后，给“表2（索引 2，对应 ECMA-335 的 TypeDef 表）”准备一块 `rowNum` 字节的工作区，用来存标记/状态之类的一维字节表。
 
-### 3.5 #US 流解密 sub_1806FF780 (解密 #2)
+### #US 流解密 sub_1806FF780 (解密 #2)
 
 `sub_1806FF780` 的唯一引用存在于 `hybridclr::managed_cdpe_vtbl`，为虚表第五个元素，如下
 
@@ -285,7 +283,7 @@ Il2CppString* ReadUserString(managed_cdpe* self, uint32_t offset) {
 }
 ```
 
-### 3.6 解密 TypeDef 表 sub_1807082D0 (解密 #3)
+### 解密 TypeDef 表 sub_1807082D0 (解密 #3)
 
 `sub_1806FF780` 的唯一引用存在于 `hybridclr::managed_cdpe_vtbl`，为虚表第八个元素
 
@@ -388,7 +386,7 @@ DWORD* ReadTypeDefRow(managed_cdpe* self, DWORD* out6, int row1based)
 * `sub_1806FAF70` 在通过一串门闸校验（`sub_18070C160`/`sub_18070B380` 比对）后，直接对传入的 `IL Code` 做解密，本函数用 **`instructions[7]`**，随后进入 `sub_18070F190(...)` 做进一步解析/分发，更像“把已解密的 **IL** 交给后续解释/加载”。
 * 状态推进：`sub_180716F90(a1->unknown, 1)` 像是“阶段标记 = 已解密”，符合方法体加载流程中的一步。
 
-### 3.8 总结
+### 总结
 
 通过上面的分析，我们可以得到在 `CDPH Header` 中读取的 `Opcodes` 与实际解密的关系如下表
 
@@ -403,7 +401,7 @@ DWORD* ReadTypeDefRow(managed_cdpe* self, DWORD* out6, int row1based)
 |6|TypeDef|typeDefRowMetaDataSize|解密 **表流（Tables Stream）** 中的 TypeDef 表（表索引 2）|
 |7|IL Codes|0x10 (16)|解密方法体的 IL Codes|
 
-## 4. 解密算法分析 (`DecryptData`/`DecryptBlock`)
+## 解密算法分析 (`DecryptData`/`DecryptBlock`)
 
 总结一句话：这是个 **“指令驱动的字节块变换器”**。
 `DecryptData` 负责把整段数据按固定块长切片，然后对每个块调用一次 `DecryptBlock`；
@@ -537,7 +535,7 @@ void DecryptData(const u8* opcodes, size_t opcodes_len,
 * **密钥索引固定**：每条指令使用 `key[固定位置]`；只要拿到 `opcodes` 和 `key`，就完全可逆。
 * **实现方便**：按上面的 5 个模板就能写出可运行的参考实现/解密器。
 
-## 5. 总结
+## 总结
 
 首先感谢我的朋友 @66hh ( [52pojie - zbby](https://www.52pojie.cn/home.php?mod=space&uid=1280903) | [Github - 66hh](https://github.com/66hh) )，在对解密逻辑的分析以及解密器的编写中都做出了重大贡献，如果没有他的协助，该文章是不可能出现的 ovo
 
