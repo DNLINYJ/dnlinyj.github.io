@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bgd" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#151021"/>
+      <stop offset="0.5" stop-color="#191327"/>
+      <stop offset="1" stop-color="#171430"/>
+    </linearGradient>
+    <radialGradient id="dblob1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4a2547" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#4a2547" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="dblob2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2d2260" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#2d2260" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bgd)"/>
+  <circle cx="350" cy="220" r="520" fill="url(#dblob1)"/>
+  <circle cx="1600" cy="350" r="580" fill="url(#dblob2)"/>
+  <circle cx="1000" cy="950" r="600" fill="url(#dblob1)" opacity="0.8"/>
+  <g fill="#ffffff">
+    <circle cx="180" cy="140" r="1.6" opacity="0.5"/>
+    <circle cx="420" cy="90" r="1.2" opacity="0.4"/>
+    <circle cx="700" cy="200" r="1.4" opacity="0.45"/>
+    <circle cx="980" cy="80" r="1.7" opacity="0.5"/>
+    <circle cx="1240" cy="180" r="1.2" opacity="0.4"/>
+    <circle cx="1520" cy="100" r="1.5" opacity="0.5"/>
+    <circle cx="1780" cy="220" r="1.2" opacity="0.4"/>
+    <circle cx="120" cy="480" r="1.2" opacity="0.35"/>
+    <circle cx="540" cy="420" r="1" opacity="0.3"/>
+    <circle cx="900" cy="560" r="1.3" opacity="0.35"/>
+    <circle cx="1360" cy="480" r="1.1" opacity="0.3"/>
+    <circle cx="1700" cy="620" r="1.3" opacity="0.35"/>
+    <circle cx="300" cy="800" r="1.2" opacity="0.3"/>
+    <circle cx="760" cy="920" r="1.1" opacity="0.3"/>
+    <circle cx="1180" cy="840" r="1.2" opacity="0.3"/>
+    <circle cx="1620" cy="960" r="1.4" opacity="0.35"/>
+  </g>
+  <g fill="#b58cd6" opacity="0.14">
+    <path d="M400,600 C405,603 405,609 400,613 C395,609 395,603 400,600"/>
+    <path d="M1100,300 C1105,303 1105,309 1100,313 C1095,309 1095,303 1100,300"/>
+    <path d="M1500,760 C1505,763 1505,769 1500,773 C1495,769 1495,763 1500,760"/>
+    <path d="M800,720 C805,723 805,729 800,733 C795,729 795,723 800,720"/>
+  </g>
+</svg>

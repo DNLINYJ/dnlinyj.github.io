@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="640" viewBox="0 0 1920 640" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="nsky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c1638"/>
+      <stop offset="0.45" stop-color="#3a2a66"/>
+      <stop offset="0.75" stop-color="#6f4a96"/>
+      <stop offset="1" stop-color="#b06aa4"/>
+    </linearGradient>
+    <radialGradient id="nmoonGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff3d8" stop-opacity="0.8"/>
+      <stop offset="0.45" stop-color="#ffe9c9" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffe9c9" stop-opacity="0"/>
+    </radialGradient>
+    <g id="nblossom">
+      <g fill="#ffb7cf">
+        <ellipse cx="0" cy="-6" rx="4" ry="6"/>
+        <ellipse cx="0" cy="-6" rx="4" ry="6" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-6" rx="4" ry="6" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-6" rx="4" ry="6" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-6" rx="4" ry="6" transform="rotate(288)"/>
+      </g>
+      <circle r="2.2" fill="#ffe89b"/>
+    </g>
+    <path id="npetal" d="M0,-7 C5,-3.5 5,3.5 0,8 C-5,3.5 -5,-3.5 0,-7"/>
+    <linearGradient id="nmeteor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="640" fill="url(#nsky)"/>
+
+  <g fill="#ffffff">
+    <circle cx="150" cy="90" r="1.8" opacity="0.85"/>
+    <circle cx="320" cy="160" r="1.3" opacity="0.6"/>
+    <circle cx="470" cy="70" r="1.6" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.25;0.8" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="640" cy="140" r="1.2" opacity="0.55"/>
+    <circle cx="800" cy="80" r="1.9" opacity="0.9"/>
+    <circle cx="980" cy="180" r="1.2" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.12;0.5" dur="5.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1130" cy="100" r="1.6" opacity="0.75"/>
+    <circle cx="1300" cy="60" r="2" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1480" cy="170" r="1.2" opacity="0.55"/>
+    <circle cx="1660" cy="120" r="1.7" opacity="0.8"/>
+    <circle cx="1820" cy="70" r="1.4" opacity="0.7"/>
+    <circle cx="90" cy="250" r="1.2" opacity="0.45"/>
+    <circle cx="560" cy="260" r="1.2" opacity="0.45"/>
+    <circle cx="1050" cy="300" r="1" opacity="0.35"/>
+    <circle cx="1750" cy="280" r="1.2" opacity="0.4"/>
+  </g>
+
+  <g opacity="0.75">
+    <line x1="1420" y1="70" x2="1560" y2="165" stroke="url(#nmeteor)" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="1560" cy="165" r="2.8" fill="#ffffff"/>
+  </g>
+
+  <circle cx="360" cy="185" r="170" fill="url(#nmoonGlow)"/>
+  <circle cx="360" cy="185" r="68" fill="#fff6e4"/>
+  <circle cx="338" cy="165" r="10" fill="#f4e2c4" opacity="0.6"/>
+  <circle cx="378" cy="205" r="14" fill="#f4e2c4" opacity="0.5"/>
+
+  <g fill="#c9a7dd" opacity="0.22">
+    <ellipse cx="900" cy="300" rx="260" ry="20"/>
+    <ellipse cx="1020" cy="278" rx="140" ry="15"/>
+    <ellipse cx="1600" cy="360" rx="220" ry="18"/>
+  </g>
+
+  <path d="M0,480 C200,440 380,470 580,452 C800,432 960,468 1180,452 C1420,434 1600,466 1920,444 L1920,640 L0,640 Z" fill="#2b2154" opacity="0.9"/>
+
+  <g fill="#1c1540">
+    <rect x="80" y="500" width="70" height="140"/>
+    <rect x="102" y="482" width="10" height="22"/>
+    <rect x="200" y="530" width="100" height="110"/>
+    <rect x="360" y="512" width="58" height="128"/>
+    <rect x="470" y="540" width="110" height="100"/>
+    <rect x="640" y="508" width="62" height="132"/>
+    <rect x="660" y="488" width="9" height="24"/>
+    <rect x="760" y="536" width="92" height="104"/>
+    <rect x="900" y="514" width="56" height="126"/>
+    <rect x="1010" y="540" width="104" height="100"/>
+    <rect x="1170" y="512" width="60" height="128"/>
+    <rect x="1190" y="492" width="9" height="24"/>
+    <rect x="1290" y="538" width="96" height="102"/>
+    <rect x="1440" y="514" width="58" height="126"/>
+    <rect x="1550" y="540" width="100" height="100"/>
+    <rect x="1710" y="512" width="64" height="128"/>
+    <rect x="1830" y="538" width="90" height="102"/>
+  </g>
+  <g fill="#ffd98a" opacity="0.8">
+    <rect x="94" y="516" width="6" height="8"/>
+    <rect x="120" y="548" width="6" height="8"/>
+    <rect x="222" y="544" width="6" height="7"/>
+    <rect x="262" y="566" width="6" height="7"/>
+    <rect x="372" y="528" width="6" height="8"/>
+    <rect x="394" y="560" width="6" height="8"/>
+    <rect x="500" y="556" width="6" height="7"/>
+    <rect x="652" y="524" width="6" height="8"/>
+    <rect x="676" y="556" width="6" height="8"/>
+    <rect x="782" y="550" width="6" height="7"/>
+    <rect x="912" y="530" width="6" height="8"/>
+    <rect x="936" y="562" width="6" height="8"/>
+    <rect x="1036" y="556" width="6" height="7"/>
+    <rect x="1182" y="528" width="6" height="8"/>
+    <rect x="1206" y="560" width="6" height="8"/>
+    <rect x="1312" y="552" width="6" height="7"/>
+    <rect x="1452" y="530" width="6" height="8"/>
+    <rect x="1476" y="562" width="6" height="8"/>
+    <rect x="1576" y="556" width="6" height="7"/>
+    <rect x="1722" y="528" width="6" height="8"/>
+    <rect x="1748" y="560" width="6" height="8"/>
+    <rect x="1854" y="552" width="6" height="7"/>
+  </g>
+
+  <g stroke="#3d2338" fill="none" stroke-linecap="round">
+    <path d="M1940,90 C1810,100 1740,55 1650,60 C1600,63 1565,50 1540,32" stroke-width="10"/>
+    <path d="M1730,62 C1706,88 1672,100 1630,103" stroke-width="5"/>
+  </g>
+  <use href="#nblossom" transform="translate(1768,82) scale(1.5) rotate(20)"/>
+  <use href="#nblossom" transform="translate(1706,60) scale(1.4) rotate(65)"/>
+  <use href="#nblossom" transform="translate(1652,86) scale(1.3)"/>
+  <use href="#nblossom" transform="translate(1618,100) scale(1.2) rotate(40)"/>
+  <use href="#nblossom" transform="translate(1582,44) scale(1.4) rotate(10)"/>
+
+  <g fill="#ffb7cf">
+    <use href="#npetal" transform="translate(600,220) rotate(35)" opacity="0.6"/>
+    <use href="#npetal" transform="translate(1150,260) rotate(-40) scale(0.85)" opacity="0.55"/>
+    <use href="#npetal" transform="translate(820,360) rotate(60) scale(0.9)" opacity="0.5"/>
+    <use href="#npetal" transform="translate(1400,320) rotate(-15)" opacity="0.5"/>
+    <use href="#npetal" transform="translate(240,340) rotate(75) scale(0.8)" opacity="0.5"/>
+    <use href="#npetal" transform="translate(1680,240) rotate(30) scale(0.9)" opacity="0.55"/>
+  </g>
+  <g fill="#ffd0e0" opacity="0.85">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="500,-30; 560,250; 500,520; 570,680" dur="15s" repeatCount="indefinite"/>
+      <use href="#npetal">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="1250,-40; 1320,240; 1250,500; 1330,680" dur="19s" repeatCount="indefinite"/>
+      <use href="#npetal" transform="scale(0.85)">
+        <animateTransform attributeName="transform" type="rotate" from="90" to="450" dur="7s" repeatCount="indefinite" additive="sum"/>
+      </use>
+    </g>
+  </g>
+</svg>

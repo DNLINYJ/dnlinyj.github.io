@@ -5,8 +5,8 @@
 # Site
 title: 一个菜鸡の博客
 subtitle: 'Action Precedes Motivation.'
-description: ''
-keywords:
+description: '逆向、CTF 与二次元手游解包の踩坑记录喵～'
+keywords: '逆向,CTF,Unity,手游解包,二次元'
 author: DNLINYJ
 language: zh-CN
 timezone: 'Asia/Shanghai'
@@ -100,6 +100,34 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: butterfly
+
+# Local search (hexo-generator-search)
+search:
+  path: search.xml
+  field: post
+  content: true
+
+# Live2D 看板娘 (hexo-helper-live2d)
+live2d:
+  enable: true
+  scriptFrom: local
+  pluginRootPath: live2dw/
+  pluginJsPath: lib/
+  pluginModelPath: assets/
+  tagMode: false
+  debug: false
+  model:
+    use: live2d-widget-model-koharu
+  display:
+    position: left
+    width: 140
+    height: 280
+    hOffset: 30
+    vOffset: -10
+  mobile:
+    show: false
+  react:
+    opacity: 0.9
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

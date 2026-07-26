@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="cy1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#120b2e"/>
+      <stop offset="0.6" stop-color="#2b1660"/>
+      <stop offset="1" stop-color="#6e2b8f"/>
+    </linearGradient>
+    <linearGradient id="cysun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff9ad5"/>
+      <stop offset="1" stop-color="#ff5e8f"/>
+    </linearGradient>
+    <linearGradient id="cygrid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff6fd8" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#4a2fd4" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#cy1)"/>
+  <g fill="#ffffff">
+    <circle cx="100" cy="70" r="1.5" opacity="0.8"/>
+    <circle cx="220" cy="120" r="1.1" opacity="0.5"/>
+    <circle cx="330" cy="50" r="1.4" opacity="0.7"/>
+    <circle cx="560" cy="90" r="1.2" opacity="0.55"/>
+    <circle cx="680" cy="50" r="1.6" opacity="0.8"/>
+    <circle cx="740" cy="140" r="1.1" opacity="0.5"/>
+  </g>
+  <!-- retro sun -->
+  <g>
+    <circle cx="400" cy="240" r="105" fill="url(#cysun)"/>
+    <g fill="#120b2e">
+      <rect x="290" y="252" width="220" height="7"/>
+      <rect x="290" y="272" width="220" height="9"/>
+      <rect x="290" y="294" width="220" height="12"/>
+      <rect x="290" y="320" width="220" height="15"/>
+    </g>
+  </g>
+  <!-- grid floor -->
+  <path d="M0,340 L800,340 L800,450 L0,450 Z" fill="#1a0f3d"/>
+  <g stroke="url(#cygrid)" stroke-width="2">
+    <line x1="0" y1="340" x2="800" y2="340"/>
+    <line x1="0" y1="356" x2="800" y2="356"/>
+    <line x1="0" y1="378" x2="800" y2="378"/>
+    <line x1="0" y1="408" x2="800" y2="408"/>
+    <line x1="400" y1="340" x2="400" y2="450"/>
+    <line x1="320" y1="340" x2="230" y2="450"/>
+    <line x1="480" y1="340" x2="570" y2="450"/>
+    <line x1="240" y1="340" x2="60" y2="450"/>
+    <line x1="560" y1="340" x2="740" y2="450"/>
+    <line x1="160" y1="340" x2="-110" y2="450"/>
+    <line x1="640" y1="340" x2="910" y2="450"/>
+  </g>
+  <!-- glitch bars -->
+  <g opacity="0.85">
+    <rect x="80" y="150" width="90" height="6" fill="#37e6ff"/>
+    <rect x="96" y="162" width="56" height="4" fill="#ff6fd8"/>
+    <rect x="640" y="180" width="80" height="6" fill="#37e6ff"/>
+    <rect x="660" y="192" width="46" height="4" fill="#ff6fd8"/>
+  </g>
+  <!-- binary rain hint -->
+  <g fill="#7fe7ff" opacity="0.55" font-family="Consolas,monospace" font-size="16">
+    <text x="60" y="230">01</text>
+    <text x="140" y="260">10</text>
+    <text x="100" y="300">11</text>
+    <text x="690" y="240">01</text>
+    <text x="640" y="290">00</text>
+    <text x="720" y="310">10</text>
+  </g>
+</svg>

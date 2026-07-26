@@ -2,6 +2,10 @@
 title: Unity逆向中常用的东西 (1)
 date: 2025-10-22 08:58:44
 tags:
+  - Unity
+  - IDA
+categories:
+  - 逆向技术
 ---
 
 ## 找 CreateDecompressor

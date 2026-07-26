@@ -2,6 +2,11 @@
 title: HybridCLR C# 方法体解密记录 V1 —— 以23年的少女前线2追放为例
 date: 2025-8-27 16:21:22
 tags:
+  - Unity
+  - HybridCLR
+  - 少女前线2
+categories:
+  - 游戏逆向
 ---
 
 本来标题我想写 `HybridCLR 标准代码加固解密记录` 的，但考虑到不确定ym是否基于社区版的基础上作的修改，因而作罢

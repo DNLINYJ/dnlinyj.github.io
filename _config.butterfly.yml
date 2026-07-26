@@ -1,0 +1,216 @@
+# ============================================================
+# 🌸 Butterfly 主题覆盖配置（二次元粉樱风）
+# 该文件会与 themes/butterfly/_config.yml 深度合并，本文件优先
+# ============================================================
+
+# ---------- 导航 ----------
+nav:
+  fixed: true
+
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-box-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  关于喵: /about/ || fas fa-cat
+
+# ---------- 代码块 ----------
+code_blocks:
+  theme: pale night
+  macStyle: true
+  height_limit: 420
+  copy: true
+  language: true
+  shrink: false
+
+# ---------- 社交 ----------
+social:
+  fab fa-github: https://github.com/DNLINYJ || Github || '#b58cf0'
+
+# ---------- 图片 ----------
+favicon: /img/anime/favicon.svg
+
+avatar:
+  img: /img/anime/avatar.jpg
+  effect: false
+
+default_top_img: /img/anime/top.svg
+index_img: /img/anime/banner.svg
+footer_img: false
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  default_cover:
+    - /img/anime/covers/cover-sakura.svg
+    - /img/anime/covers/cover-night.svg
+    - /img/anime/covers/cover-sky.svg
+    - /img/anime/covers/cover-torii.svg
+    - /img/anime/covers/cover-cyber.svg
+    - /img/anime/covers/cover-mint.svg
+
+error_404:
+  enable: true
+  subtitle: '页面被猫猫叼走了喵～ (´,,•ω•,,)'
+  background: /img/anime/covers/cover-night.svg
+
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+# ---------- 首页副标题（打字机 + 一言） ----------
+subtitle:
+  enable: true
+  effect: true
+  source: 1
+  sub:
+    - 欢迎来到菜鸡の小窝喵～ ฅ(＾・ω・＾ฅ)
+    - Action Precedes Motivation.
+    - 逆向 / CTF / 手游解包踩坑日常～
+
+# ---------- 文章 ----------
+noticeOutdate:
+  enable: true
+  style: flat
+  limit_day: 365
+  position: top
+  message_prev: 距离上次更新已经过去
+  message_next: 天了，内容可能已经过时喵，请注意甄别～
+
+# ---------- 页脚 ----------
+footer:
+  owner:
+    enable: true
+    since: 2023
+  copyright:
+    enable: true
+    version: false
+  custom_text: '<div style="margin-top:6px">ฅ^•ﻌ•^ฅ 本小窝已被猫猫占领喵～ <span class="footer-heart">❤</span></div><div class="cute-badges"><span class="cute-badge"><span class="cb-l">Frame</span><span class="cb-r blue">Hexo</span></span><span class="cute-badge"><span class="cb-l">Theme</span><span class="cb-r purple">Butterfly</span></span><span class="cute-badge"><span class="cb-l">萌度</span><span class="cb-r">MAX 喵</span></span></div>'
+
+# ---------- 侧栏 ----------
+aside:
+  card_author:
+    enable: true
+    description: 二次元浓度超标的逆向菜鸡，<br>专注拆解各路手游喵～ (っ´ω`)っ
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/DNLINYJ
+  card_announcement:
+    enable: true
+    content: 欢迎光临菜鸡の小窝！(=^･ω･^=)<br>这里记录逆向、CTF、Unity 手游解包的踩坑日常，常来玩喵～ 🌸
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    runtime_date: 10/05/2023
+
+# ---------- 字数统计（hexo-wordcount） ----------
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+# ---------- 本地搜索 ----------
+search:
+  use: local_search
+  placeholder: 找点什么喵？
+  local_search:
+    preload: true
+    top_n_per_article: 1
+
+# ---------- 主题色（粉樱） ----------
+theme_color:
+  enable: true
+  main: "#ff7ea8"
+  paginator: "#ff7ea8"
+  button_hover: "#e0568f"
+  text_selection: "#ffb7d1"
+  link_color: "#99a9bf"
+  meta_color: "#a08cb3"
+  hr_color: "#ffb7d1"
+  code_foreground: "#ef5a8f"
+  code_background: "rgba(255, 126, 168, 0.08)"
+  toc_color: "#ff7ea8"
+  blockquote_padding_color: "#ff7ea8"
+  blockquote_background_color: "rgba(255, 126, 168, 0.07)"
+  scrollbar_color: "#ffa6c4"
+  meta_theme_color_light: "#fff5f9"
+  meta_theme_color_dark: "#191324"
+
+rounded_corners_ui: true
+
+mask:
+  header: true
+  footer: false
+
+# ---------- 加载动画 ----------
+preloader:
+  enable: true
+  source: 1
+
+enter_transitions: true
+
+# ---------- 文章标题美化（猫爪前缀） ----------
+beautify:
+  enable: true
+  field: post
+  title_prefix_icon: '\f1b0'
+  title_prefix_icon_color: '#ff7ea8'
+
+# ---------- 字体 ----------
+font:
+  font_family: "'LXGW WenKai Screen', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif"
+  code_font_family: "Consolas, 'JetBrains Mono', Menlo, monospace"
+
+blog_title_font:
+  font_family: "'LXGW WenKai Screen', 'PingFang SC', 'Microsoft YaHei', sans-serif"
+
+# ---------- 分隔线猫爪 ----------
+hr_icon:
+  enable: true
+  icon: '\f1b0'
+
+# ---------- 提示条 ----------
+snackbar:
+  enable: true
+  position: bottom-left
+  bg_light: '#ff7ea8'
+  bg_dark: '#2b2158'
+
+# ---------- 点击冒可爱文字 ----------
+clickShowText:
+  enable: true
+  text:
+    - 喵～
+    - (=^･ω･^=)
+    - にゃんぱす～
+    - ヾ(≧▽≦*)o
+    - 好耶！
+    - 🌸
+    - ✧(≖ ◡ ≖✿)
+  fontSize: 16px
+  random: true
+  mobile: false
+
+# ---------- 图片灯箱 ----------
+lightbox: medium_zoom
+
+# ---------- 右下角 ----------
+rightside_scroll_percent: true
+
+# ---------- 注入自定义样式与脚本 ----------
+inject:
+  head:
+    - <link rel="stylesheet" href="/css/custom.css?v=1.0">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.css" media="print" onload="this.media='all'">
+  bottom:
+    - <script defer src="/js/sakura.js"></script>
+    - <script defer src="/js/custom.js"></script>

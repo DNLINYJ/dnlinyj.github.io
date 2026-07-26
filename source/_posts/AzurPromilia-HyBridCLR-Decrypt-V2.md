@@ -2,6 +2,11 @@
 title: 以蓝色星原：旅谣为例 —— HybridCLR 解密记录 V2
 date: 2025-9-14 16:48:22
 tags:
+  - Unity
+  - HybridCLR
+  - 蓝色星原
+categories:
+  - 游戏逆向
 ---
 
 

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ck1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ecdf5"/>
+      <stop offset="0.7" stop-color="#bfe3fb"/>
+      <stop offset="1" stop-color="#eaf7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#ck1)"/>
+  <circle cx="150" cy="90" r="46" fill="#fff4c2"/>
+  <circle cx="150" cy="90" r="66" fill="#fff4c2" opacity="0.35"/>
+  <g fill="#ffffff">
+    <g opacity="0.95">
+      <ellipse cx="420" cy="150" rx="90" ry="30"/>
+      <ellipse cx="480" cy="132" rx="60" ry="26"/>
+      <ellipse cx="360" cy="136" rx="50" ry="22"/>
+    </g>
+    <g opacity="0.85">
+      <ellipse cx="660" cy="240" rx="80" ry="24"/>
+      <ellipse cx="710" cy="224" rx="50" ry="20"/>
+    </g>
+    <g opacity="0.8">
+      <ellipse cx="140" cy="300" rx="90" ry="24"/>
+      <ellipse cx="200" cy="284" rx="55" ry="20"/>
+    </g>
+    <ellipse cx="560" cy="60" rx="60" ry="14" opacity="0.6"/>
+  </g>
+  <!-- paper plane -->
+  <g transform="translate(340,260) rotate(-12)">
+    <path d="M0,0 L96,-26 L34,18 Z" fill="#ffffff" stroke="#7fb8de" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M34,18 L40,44 L52,10 Z" fill="#e3f2fc" stroke="#7fb8de" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M-60,34 C-40,28 -20,16 0,0" stroke="#ffffff" stroke-width="4" fill="none" stroke-dasharray="2 12" stroke-linecap="round"/>
+    <path d="M-110,50 C-92,46 -76,42 -60,34" stroke="#ffffff" stroke-width="4" fill="none" stroke-dasharray="2 14" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  <!-- birds -->
+  <g stroke="#5f8fb4" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M600,110 C608,102 616,102 622,108 C628,102 636,102 644,110"/>
+    <path d="M660,150 C666,144 672,144 677,148 C682,144 688,144 694,150"/>
+  </g>
+  <path d="M0,392 C160,372 300,388 460,380 C620,370 720,386 800,378 L800,450 L0,450 Z" fill="#a8d8f0"/>
+  <path d="M0,414 C180,398 340,412 520,404 C660,398 740,410 800,404 L800,450 L0,450 Z" fill="#8cc6e8" opacity="0.9"/>
+</svg>

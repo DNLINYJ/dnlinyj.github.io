@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="cm1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#153a52"/>
+      <stop offset="0.55" stop-color="#1f6d6b"/>
+      <stop offset="1" stop-color="#5fc4a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#cm1)"/>
+  <g fill="#ffffff">
+    <circle cx="90" cy="70" r="1.7" opacity="0.85"/>
+    <circle cx="200" cy="130" r="1.2" opacity="0.6"/>
+    <circle cx="340" cy="60" r="1.5" opacity="0.8"/>
+    <circle cx="470" cy="140" r="1.1" opacity="0.5"/>
+    <circle cx="590" cy="80" r="1.8" opacity="0.9"/>
+    <circle cx="710" cy="140" r="1.2" opacity="0.55"/>
+    <circle cx="150" cy="220" r="1.1" opacity="0.45"/>
+    <circle cx="650" cy="240" r="1" opacity="0.4"/>
+    <path d="M420,100 C421,108 424,111 432,112 C424,113 421,116 420,124 C419,116 416,113 408,112 C416,111 419,108 420,100" opacity="0.9"/>
+  </g>
+  <!-- shooting stars -->
+  <g stroke="#bff5e3" stroke-linecap="round">
+    <line x1="520" y1="60" x2="640" y2="140" stroke-width="3" opacity="0.85"/>
+    <line x1="180" y1="90" x2="260" y2="150" stroke-width="2" opacity="0.6"/>
+  </g>
+  <circle cx="640" cy="140" r="3.4" fill="#ffffff"/>
+  <circle cx="260" cy="150" r="2.4" fill="#ffffff" opacity="0.8"/>
+  <!-- mountains -->
+  <path d="M0,330 L150,210 L280,330 Z" fill="#0f2e40" opacity="0.95"/>
+  <path d="M150,210 L196,248 L172,248 Z" fill="#e8fbf4"/>
+  <path d="M180,330 L360,170 L560,330 Z" fill="#123a48"/>
+  <path d="M360,170 L416,222 L390,214 L370,230 Z" fill="#e8fbf4"/>
+  <path d="M470,330 L640,220 L800,330 Z" fill="#0f2e40" opacity="0.9"/>
+  <path d="M640,220 L684,252 L660,252 Z" fill="#e8fbf4"/>
+  <!-- lake -->
+  <path d="M0,330 L800,330 L800,450 L0,450 Z" fill="#0c2537"/>
+  <g stroke="#5fc4a8" opacity="0.5" stroke-width="3" stroke-linecap="round">
+    <line x1="100" y1="360" x2="220" y2="360"/>
+    <line x1="420" y1="380" x2="560" y2="380"/>
+    <line x1="180" y1="408" x2="300" y2="408"/>
+    <line x1="600" y1="416" x2="700" y2="416"/>
+  </g>
+  <ellipse cx="400" cy="356" rx="90" ry="6" fill="#bff5e3" opacity="0.35"/>
+</svg>

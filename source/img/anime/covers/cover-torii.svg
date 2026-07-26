@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ct1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5a3d8f"/>
+      <stop offset="0.45" stop-color="#c05c96"/>
+      <stop offset="0.75" stop-color="#ff8c69"/>
+      <stop offset="1" stop-color="#ffd08a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#ct1)"/>
+  <circle cx="400" cy="300" r="90" fill="#ffe9a8" opacity="0.9"/>
+  <circle cx="400" cy="300" r="130" fill="#ffe9a8" opacity="0.3"/>
+  <g fill="#ffffff" opacity="0.7">
+    <circle cx="120" cy="80" r="1.6"/>
+    <circle cx="250" cy="60" r="1.3"/>
+    <circle cx="600" cy="70" r="1.7"/>
+    <circle cx="700" cy="110" r="1.2"/>
+    <circle cx="80" cy="160" r="1.2"/>
+  </g>
+  <g fill="#ffd7ba" opacity="0.4">
+    <ellipse cx="180" cy="180" rx="130" ry="14"/>
+    <ellipse cx="620" cy="150" rx="110" ry="12"/>
+  </g>
+  <!-- water -->
+  <path d="M0,360 L800,360 L800,450 L0,450 Z" fill="#3d2b66"/>
+  <ellipse cx="400" cy="382" rx="120" ry="10" fill="#ffcf8f" opacity="0.55"/>
+  <ellipse cx="400" cy="404" rx="80" ry="7" fill="#ffcf8f" opacity="0.4"/>
+  <g stroke="#8a6bb0" stroke-width="3" opacity="0.6" stroke-linecap="round">
+    <line x1="80" y1="384" x2="180" y2="384"/>
+    <line x1="600" y1="396" x2="710" y2="396"/>
+    <line x1="140" y1="420" x2="230" y2="420"/>
+    <line x1="560" y1="428" x2="640" y2="428"/>
+  </g>
+  <!-- torii -->
+  <g fill="#2b1a3d">
+    <path d="M282,120 L518,120 L530,142 L270,142 Z"/>
+    <rect x="292" y="150" width="216" height="14"/>
+    <rect x="316" y="150" width="22" height="212"/>
+    <rect x="462" y="150" width="22" height="212"/>
+    <rect x="390" y="150" width="20" height="34"/>
+    <rect x="300" y="352" width="54" height="12"/>
+    <rect x="446" y="352" width="54" height="12"/>
+  </g>
+  <!-- birds -->
+  <g stroke="#2b1a3d" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M580,180 C588,172 596,172 602,178 C608,172 616,172 624,180"/>
+    <path d="M640,210 C646,204 652,204 657,208 C662,204 668,204 674,210"/>
+    <path d="M180,220 C186,214 192,214 197,218 C202,214 208,214 214,220"/>
+  </g>
+</svg>

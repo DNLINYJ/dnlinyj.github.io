@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="cn1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e1a45"/>
+      <stop offset="0.6" stop-color="#41307a"/>
+      <stop offset="1" stop-color="#7c55a8"/>
+    </linearGradient>
+    <radialGradient id="cnm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff3d8" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#fff3d8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#cn1)"/>
+  <g fill="#ffffff">
+    <circle cx="80" cy="60" r="1.8" opacity="0.9"/>
+    <circle cx="180" cy="110" r="1.2" opacity="0.6"/>
+    <circle cx="300" cy="50" r="1.6" opacity="0.8"/>
+    <circle cx="420" cy="120" r="1.1" opacity="0.5"/>
+    <circle cx="530" cy="70" r="1.9" opacity="0.9"/>
+    <circle cx="700" cy="130" r="1.3" opacity="0.6"/>
+    <circle cx="760" cy="60" r="1.6" opacity="0.8"/>
+    <circle cx="120" cy="200" r="1.2" opacity="0.5"/>
+    <circle cx="360" cy="210" r="1" opacity="0.45"/>
+    <circle cx="640" cy="230" r="1.2" opacity="0.5"/>
+    <path d="M245,85 C246,93 249,96 257,97 C249,98 246,101 245,109 C244,101 241,98 233,97 C241,96 244,93 245,85" opacity="0.85"/>
+    <path d="M672,175 C673,181 675,183 681,184 C675,185 673,187 672,193 C671,187 669,185 663,184 C669,183 671,181 672,175" opacity="0.7"/>
+  </g>
+  <line x1="470" y1="40" x2="580" y2="115" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="580" cy="115" r="2.5" fill="#ffffff" opacity="0.9"/>
+  <circle cx="620" cy="130" r="130" fill="url(#cnm)"/>
+  <circle cx="620" cy="130" r="55" fill="#fff6e4"/>
+  <circle cx="602" cy="114" r="8" fill="#f4e2c4" opacity="0.6"/>
+  <circle cx="634" cy="146" r="11" fill="#f4e2c4" opacity="0.5"/>
+  <path d="M0,330 C120,300 240,325 380,310 C540,293 660,322 800,305 L800,450 L0,450 Z" fill="#241c4d"/>
+  <g transform="translate(560,308)" fill="#120e28">
+    <path d="M-20,3 C-23,-30 -11,-45 1,-46 C16,-48 22,-33 21,-18 C20,-8 18,-2 17,3 Z"/>
+    <circle cx="3" cy="-54" r="13"/>
+    <path d="M-5,-63 L-2,-75 L4,-64 Z"/>
+    <path d="M8,-64 L13,-75 L17,-63 Z"/>
+    <path d="M-18,0 C-30,-5 -36,-17 -32,-27 C-29,-33 -23,-34 -22,-28 C-26,-19 -26,-10 -15,-4 Z"/>
+    <ellipse cx="0" cy="3" rx="20" ry="4"/>
+  </g>
+  <g fill="#ffb7cf" opacity="0.6">
+    <path d="M150,160 C155,163 155,169 150,173 C145,169 145,163 150,160"/>
+    <path d="M420,260 C425,263 425,269 420,273 C415,269 415,263 420,260"/>
+    <path d="M80,300 C85,303 85,309 80,313 C75,309 75,303 80,300"/>
+  </g>
+</svg>
