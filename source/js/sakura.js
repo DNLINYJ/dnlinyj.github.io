@@ -1,4 +1,4 @@
-/* 樱花飘落特效 - 全屏 canvas 花瓣 */
+/* 樱花飘落特效 - 全屏 canvas 花瓣（时间基准，速度与刷新率无关） */
 (function () {
   'use strict';
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -21,6 +21,7 @@
   resize();
   window.addEventListener('resize', resize);
 
+  /* 速度单位统一为 px/秒 或 弧度/秒 */
   function Petal(initial) {
     this.reset(initial);
   }
@@ -28,23 +29,23 @@
     this.x = Math.random() * W;
     this.y = initial ? Math.random() * H : -20 - Math.random() * 60;
     this.size = 7 + Math.random() * 8;
-    this.speedY = 0.6 + Math.random() * 1.1;
-    this.speedX = 0.2 + Math.random() * 0.5;
+    this.speedY = 24 + Math.random() * 28;          // 24~52 px/s，悠悠地落
+    this.speedX = 5 + Math.random() * 9;            // 轻微向右飘
     this.swing = Math.random() * Math.PI * 2;
-    this.swingSpeed = 0.008 + Math.random() * 0.02;
+    this.swingSpeed = 0.5 + Math.random() * 0.9;    // 摇摆频率 rad/s
     this.swingRange = 30 + Math.random() * 50;
     this.rot = Math.random() * Math.PI * 2;
-    this.rotSpeed = (Math.random() - 0.5) * 0.03;
+    this.rotSpeed = (Math.random() - 0.5) * 1.6;    // 自转 rad/s
     this.color = COLORS[(Math.random() * COLORS.length) | 0];
     this.opacity = 0.55 + Math.random() * 0.4;
     this.baseX = this.x;
   };
-  Petal.prototype.update = function () {
-    this.y += this.speedY;
-    this.swing += this.swingSpeed;
+  Petal.prototype.update = function (dt) {
+    this.y += this.speedY * dt;
+    this.swing += this.swingSpeed * dt;
     this.x = this.baseX + Math.sin(this.swing) * this.swingRange;
-    this.baseX += this.speedX * 0.3;
-    this.rot += this.rotSpeed;
+    this.baseX += this.speedX * dt;
+    this.rot += this.rotSpeed * dt;
     if (this.y > H + 30 || this.baseX > W + 80) this.reset(false);
   };
   Petal.prototype.draw = function () {
@@ -67,19 +68,26 @@
   for (var i = 0; i < COUNT; i++) petals.push(new Petal(true));
 
   var running = true;
+  var last = performance.now();
   document.addEventListener('visibilitychange', function () {
     running = !document.hidden;
-    if (running) loop();
+    if (running) {
+      last = performance.now();
+      requestAnimationFrame(loop);
+    }
   });
 
-  function loop() {
+  function loop(now) {
     if (!running) return;
+    if (typeof now !== 'number') now = performance.now();
+    var dt = Math.min((now - last) / 1000, 0.05); // 封顶防跳变
+    last = now;
     ctx.clearRect(0, 0, W, H);
     for (var i = 0; i < petals.length; i++) {
-      petals[i].update();
+      petals[i].update(dt);
       petals[i].draw();
     }
     requestAnimationFrame(loop);
   }
-  loop();
+  requestAnimationFrame(loop);
 })();

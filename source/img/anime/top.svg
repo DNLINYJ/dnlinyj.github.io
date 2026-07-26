@@ -136,13 +136,13 @@
   </g>
   <g fill="#ffd0e0" opacity="0.85">
     <g>
-      <animateTransform attributeName="transform" type="translate" values="500,-30; 560,250; 500,520; 570,680" dur="15s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="500,-30; 560,250; 500,520; 570,680" dur="24s" repeatCount="indefinite"/>
       <use href="#npetal">
         <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite" additive="sum"/>
       </use>
     </g>
     <g>
-      <animateTransform attributeName="transform" type="translate" values="1250,-40; 1320,240; 1250,500; 1330,680" dur="19s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="1250,-40; 1320,240; 1250,500; 1330,680" dur="30s" repeatCount="indefinite"/>
       <use href="#npetal" transform="scale(0.85)">
         <animateTransform attributeName="transform" type="rotate" from="90" to="450" dur="7s" repeatCount="indefinite" additive="sum"/>
       </use>

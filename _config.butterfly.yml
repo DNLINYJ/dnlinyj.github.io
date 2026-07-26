@@ -212,5 +212,5 @@ inject:
     - <link rel="stylesheet" href="/css/custom.css?v=1.0">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.css" media="print" onload="this.media='all'">
   bottom:
-    - <script defer src="/js/sakura.js"></script>
+    - <script defer src="/js/sakura.js?v=2"></script>
     - <script defer src="/js/custom.js"></script>
