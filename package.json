@@ -29,6 +29,6 @@
     "live2d-widget-model-koharu": "^1.0.5"
   },
   "devDependencies": {
-    "puppeteer-core": "^25.3.0"
+    "puppeteer-core": "^25.4.0"
   }
 }
