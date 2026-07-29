@@ -18,7 +18,7 @@ menu:
 code_blocks:
   theme: pale night
   macStyle: true
-  height_limit: 420
+  height_limit: false
   copy: true
   language: true
   shrink: false
